@@ -7,14 +7,43 @@
 </head>
 <body>
 <?php
-    $i =array('cold','hot','rain');
 
-    $j = array_reverse($i);
+    $arr = array('parth','rajubhai','cahman','jetho');
 
-    foreach($i as $d){
-        echo $d."<br>";
-        
+    $reverse = array_reverse($arr);
+
+    foreach($reverse as $p){
+    echo $p."<br>";
     }
+
+    $arr = array(
+        "name" => "Parth",
+        "city" => "Rajkot",
+        "age" => 20
+    );
+
+    $reverse = array_reverse($arr);
+
+    foreach($reverse as $key => $value){
+        echo $key . " : " . $value . "<br>";
+    }
+
+    $arr = array(
+        array("Parth", 20, "Rajkot"),
+        array("Rahul", 22, "Ahmedabad"),
+        array("Amit", 21, "Surat")
+    );
+
+    $reverse = array_reverse($arr);
+
+    foreach($reverse as $row){
+        foreach($row as $value){
+            echo $value . " ";
+        }
+        echo "<br>";
+    }
+
+
     ?>
 </body>
 </html>
